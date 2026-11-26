@@ -5,7 +5,7 @@ date: 2026-11-26
 tags: [mmmllm, llm, apple-silicon, memory]
 series: mmmllm
 part: 3
-draft: true
+draft: false
 ---
 
 [Part 1](/blog/mmmllm-1-dram-slab/) built the arena: 2 MiB units, a free bitmap, a step table, two

@@ -5,7 +5,7 @@ date: 2026-11-26
 tags: [mmmllm, llm, apple-silicon, memory]
 series: mmmllm
 part: 1
-draft: true
+draft: false
 ---
 
 My day job is AI inference engineering, which mostly means glue code. I run engines like

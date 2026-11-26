@@ -5,7 +5,7 @@ date: 2026-11-26
 tags: [mmmllm, llm, apple-silicon, memory]
 series: mmmllm
 part: 2
-draft: true
+draft: false
 ---
 
 [Part 1](/blog/mmmllm-1-dram-slab/) cut the Mac mini's 64 GB slab into regions, and the arena into 2 MiB
