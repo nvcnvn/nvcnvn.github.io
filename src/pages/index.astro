@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { getPosts } from '../utils';
+import { SITE_DESCRIPTION } from '../consts';
+
+const posts = await getPosts();
+---
+
+<Base>
+  <section class="intro">
+    <h1>Hi, I'm Nguyên.</h1>
+    <p>{SITE_DESCRIPTION}</p>
+  </section>
+
+  <h2 class="section-label">Writing</h2>
+  {posts.length ? <PostList posts={posts} /> : <p class="muted">No posts yet.</p>}
+</Base>

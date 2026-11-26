@@ -1,0 +1,12 @@
+---
+import { AUTHOR, SOCIAL } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <span>© {year} {AUTHOR}</span>
+  <ul>
+    <li><a href={SOCIAL.github} rel="me">GitHub</a></li>
+    <li><a href="/rss.xml">RSS</a></li>
+  </ul>
+</footer>
