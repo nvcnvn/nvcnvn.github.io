@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F6368"/></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FCE8E6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#F4B4AE" stroke-width="2.5"/></pattern></defs><rect width="1280" height="720" fill="#FFFFFF"/><text x="24" y="40" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One block of DRAM, three processors</text>
+<text x="24" y="66" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">M4 Pro Mac mini. No processor has memory of its own: all three read and write the same physical pages.</text>
+<rect x="24" y="92" width="392" height="108" rx="10" fill="#F3FAF5" stroke="#188038" stroke-width="1.6"/>
+<text x="42" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#188038" text-anchor="start" font-weight="700" xml:space="preserve">CPU</text>
+<text x="106" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">14 cores</text>
+<text x="42" y="152" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">10 performance (2 clusters of 5)</text>
+<text x="42" y="170" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">+ 4 efficiency; no math worth it</text>
+<text x="400" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#188038" text-anchor="end" font-weight="700" xml:space="preserve">tokenizer, counters, step tables</text>
+<rect x="444" y="92" width="392" height="108" rx="10" fill="#F4F8FE" stroke="#1A73E8" stroke-width="1.6"/>
+<text x="462" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#1A73E8" text-anchor="start" font-weight="700" xml:space="preserve">GPU</text>
+<text x="526" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">20 cores</text>
+<text x="462" y="152" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">bf16 matmul ~7.5 TFLOPS</text>
+<text x="462" y="170" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">reads 210–238 GB/s</text>
+<text x="820" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#1A73E8" text-anchor="end" font-weight="700" xml:space="preserve">decode, attention, prefill</text>
+<rect x="864" y="92" width="392" height="108" rx="10" fill="#FAF4FE" stroke="#8430CE" stroke-width="1.6"/>
+<text x="882" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#8430CE" text-anchor="start" font-weight="700" xml:space="preserve">ANE</text>
+<text x="946" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">16 cores</text>
+<text x="882" y="152" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">~13 TFLOPS on small split matmuls</text>
+<text x="882" y="170" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">streams only ~39 GB/s</text>
+<text x="1240" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#8430CE" text-anchor="end" font-weight="700" xml:space="preserve">prefill&#x27;s dense layers</text>
+<line x1="220.0" y1="200" x2="220.0" y2="258" stroke="#188038" stroke-width="2.2"/>
+<line x1="640.0" y1="200" x2="640.0" y2="258" stroke="#1A73E8" stroke-width="2.2"/>
+<line x1="1060.0" y1="200" x2="1060.0" y2="258" stroke="#8430CE" stroke-width="2.2"/>
+<text x="240" y="238" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">273 GB/s peak, one budget for all three</text>
+<rect x="24" y="262" width="1232" height="90" rx="6" fill="#FFFDF5" stroke="#5F6368" stroke-width="1.6"/>
+<text x="640" y="302" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">64 GB LPDDR5X</text>
+<text x="640" y="328" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">one physical pool, mapped in 16 KiB pages</text>
+<text x="24" y="398" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">Same bytes, no copies.</text>
+<text x="250" y="398" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">A Metal buffer is the same physical pages in the CPU&#x27;s and the GPU&#x27;s page tables. The ANE reads and writes IOSurfaces, which the</text>
+<text x="250" y="418" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">GPU maps as buffers too.</text>
+<text x="24" y="456" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">Not the same rules.</text>
+<text x="250" y="456" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">The GPU sees CPU writes made before a command buffer is committed; the CPU sees GPU writes after it completes. In between,</text>
+<text x="250" y="476" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">nobody may overwrite what the other is reading.</text>
+<text x="24" y="514" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One budget.</text>
+<text x="250" y="514" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">Decode streams every weight once per token (14.4 GB on the 27B, ~64 ms). Whatever else runs at the same time takes bandwidth</text>
+<text x="250" y="534" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">from it.</text></svg>

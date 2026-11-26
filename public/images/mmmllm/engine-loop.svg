@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F6368"/></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FCE8E6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#F4B4AE" stroke-width="2.5"/></pattern></defs><rect width="1280" height="640" fill="#FFFFFF"/><text x="24" y="40" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One engine loop, two lanes</text>
+<text x="24" y="66" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Every turn of the loop: collect what the lanes finished, admit waiting requests that fit, give the prefill lane its next chunk, give the decode lane its next step.</text>
+<text x="24" y="86" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Time runs left to right (schematic). Prefill is not outside the loop: it is a lane the loop feeds one chunk at a time, next to decode.</text>
+<text x="24" y="172" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">request queue</text>
+<text x="24" y="190" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">waiting for memory</text>
+<line x1="210" y1="216" x2="1250" y2="216" stroke="#DADCE0" stroke-width="1"/>
+<text x="24" y="272" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">prefill lane</text>
+<text x="24" y="290" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">one prompt chunk at a time</text>
+<line x1="210" y1="316" x2="1250" y2="316" stroke="#DADCE0" stroke-width="1"/>
+<text x="24" y="382" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">decode lane</text>
+<text x="24" y="400" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">one token for every running request</text>
+<line x1="210" y1="426" x2="1250" y2="426" stroke="#DADCE0" stroke-width="1"/>
+<line x1="262.0" y1="130" x2="262.0" y2="450" stroke="#9AA0A6" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="266.0" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">A admitted</text>
+<line x1="917.2" y1="130" x2="917.2" y2="450" stroke="#9AA0A6" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="913.2" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#202124" text-anchor="end" font-weight="700" xml:space="preserve">A&#x27;s prompt done: A joins decode</text>
+<line x1="1000.4" y1="130" x2="1000.4" y2="450" stroke="#9AA0A6" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="1004.4" y="126" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">B stops: D admitted</text>
+<rect x="221.4" y="162" width="39.6" height="40" rx="5" fill="#FFFFFF" stroke="#C2185B" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="241.2" y="187.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#C2185B" text-anchor="middle" font-weight="700" xml:space="preserve">A</text>
+<rect x="814.2" y="162" width="185.2" height="40" rx="5" fill="#FFFFFF" stroke="#455A64" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="906.8" y="187.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#455A64" text-anchor="middle" font-weight="700" xml:space="preserve">D waits: no room</text>
+<rect x="273.4" y="262" width="247.6" height="40" rx="5" fill="#C2185B" stroke="#C2185B" stroke-width="1.4"/>
+<text x="397.2" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#FFFFFF" text-anchor="middle" font-weight="700" xml:space="preserve">A · tokens 0–1023</text>
+<rect x="523.0" y="262" width="247.6" height="40" rx="5" fill="#C2185B" stroke="#C2185B" stroke-width="1.4"/>
+<text x="646.8" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#FFFFFF" text-anchor="middle" font-weight="700" xml:space="preserve">A · 1024–2047</text>
+<rect x="772.6" y="262" width="133.2" height="40" rx="5" fill="#C2185B" stroke="#C2185B" stroke-width="1.4"/>
+<text x="839.2" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#FFFFFF" text-anchor="middle" font-weight="700" xml:space="preserve">A · 2048–2498</text>
+<rect x="1022.2" y="262" width="206.0" height="40" rx="5" fill="#455A64" stroke="#455A64" stroke-width="1.4"/>
+<text x="1125.2" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#FFFFFF" text-anchor="middle" font-weight="700" xml:space="preserve">D · tokens 0–1023</text>
+<rect x="220.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="220.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="241.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="241.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="262.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="262.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="282.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="282.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="303.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="303.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="324.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="324.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="345.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="345.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="366.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="366.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="386.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="386.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="407.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="407.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="428.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="428.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="449.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="449.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="470.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="470.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="490.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="490.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="511.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="511.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="532.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="532.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="553.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="553.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="574.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="574.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="594.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="594.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="615.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="615.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="636.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="636.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="657.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="657.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="678.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="678.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="698.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="698.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="719.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="719.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="740.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="740.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="761.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="761.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="782.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="782.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="802.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="802.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="823.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="823.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="844.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="844.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="865.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="865.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="886.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="886.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="906.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="906.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="927.6" y="372.0" width="17.8" height="15.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="927.6" y="388.0" width="17.8" height="15.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="927.6" y="404.0" width="17.8" height="15.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="948.4" y="372.0" width="17.8" height="15.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="948.4" y="388.0" width="17.8" height="15.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="948.4" y="404.0" width="17.8" height="15.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="969.2" y="372.0" width="17.8" height="15.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="969.2" y="388.0" width="17.8" height="15.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="969.2" y="404.0" width="17.8" height="15.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="990.0" y="372.0" width="17.8" height="15.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="990.0" y="388.0" width="17.8" height="15.0" rx="1.5" fill="#00838F" stroke="none" stroke-width="1"/>
+<rect x="990.0" y="404.0" width="17.8" height="15.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1010.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1010.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1031.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1031.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1052.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1052.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1073.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1073.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1094.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1094.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1114.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1114.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1135.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1135.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1156.4" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1156.4" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1177.2" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1177.2" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1198.0" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1198.0" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1218.8" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1218.8" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<rect x="1239.6" y="372.0" width="17.8" height="23.0" rx="1.5" fill="#C2185B" stroke="none" stroke-width="1"/>
+<rect x="1239.6" y="396.0" width="17.8" height="23.0" rx="1.5" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<text x="568.8" y="438" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">steps with rows B, C</text>
+<text x="958.8" y="438" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">A, B, C</text>
+<text x="1125.2" y="438" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">A, C</text>
+<rect x="210" y="468" width="14" height="14" rx="3" fill="#C2185B" stroke="none" stroke-width="1"/>
+<text x="230" y="480" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">request A</text>
+<rect x="320" y="468" width="14" height="14" rx="3" fill="#00838F" stroke="none" stroke-width="1"/>
+<text x="340" y="480" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">request B</text>
+<rect x="430" y="468" width="14" height="14" rx="3" fill="#6D4C41" stroke="none" stroke-width="1"/>
+<text x="450" y="480" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">request C</text>
+<rect x="540" y="468" width="14" height="14" rx="3" fill="#455A64" stroke="none" stroke-width="1"/>
+<text x="560" y="480" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">request D</text>
+<text x="660" y="480" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">dashed = waiting   ·   one thin bar in the decode lane = one decode step</text>
+<text x="24" y="530" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">A&#x27;s last prompt token is not prefilled: it is A&#x27;s first input in decode, which turns it into A&#x27;s first new token.</text>
+<text x="24" y="552" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">While A&#x27;s chunks run, B and C keep getting a token every step. On the 27B, one ANE chunk is ~5 s and one decode step ~80 ms,</text>
+<text x="24" y="574" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">so in reality about 60 decode steps fit under each chunk, not the handful drawn here.</text>
+<text x="24" y="596" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">Inside each bar, the same layer loop runs: a chunk pushes 1,024 rows through 64 layers, a step pushes one row per request.</text></svg>

@@ -5,13 +5,26 @@ import { getPosts, formatDate, readingTime, slugifyTag } from '../../utils';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-  return posts.map((post, i) => ({
-    params: { slug: post.id },
-    props: { post, newer: posts[i - 1], older: posts[i + 1] },
-  }));
+  return posts.map((post, i) => {
+    const { series, part } = post.data;
+    if (series && part) {
+      // a series reads in part order, not date order
+      const parts = posts.filter((p) => p.data.series === series && p.data.part);
+      return {
+        params: { slug: post.id },
+        props: {
+          post,
+          older: parts.find((p) => p.data.part === part - 1),
+          newer: parts.find((p) => p.data.part === part + 1),
+          series: true,
+        },
+      };
+    }
+    return { params: { slug: post.id }, props: { post, newer: posts[i - 1], older: posts[i + 1], series: false } };
+  });
 }
 
-const { post, newer, older } = Astro.props;
+const { post, newer, older, series } = Astro.props;
 const { Content } = await render(post);
 const { title, description, date, updated, tags } = post.data;
 ---
@@ -47,7 +60,7 @@ const { title, description, date, updated, tags } = post.data;
     {
       older && (
         <a href={`/blog/${older.id}/`}>
-          <span class="label">← Older</span>
+          <span class="label">{series ? `← Part ${older.data.part}` : '← Older'}</span>
           {older.data.title}
         </a>
       )
@@ -55,7 +68,7 @@ const { title, description, date, updated, tags } = post.data;
     {
       newer && (
         <a class="next" href={`/blog/${newer.id}/`}>
-          <span class="label">Newer →</span>
+          <span class="label">{series ? `Part ${newer.data.part} →` : 'Newer →'}</span>
           {newer.data.title}
         </a>
       )

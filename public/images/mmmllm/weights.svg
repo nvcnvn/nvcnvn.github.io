@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F6368"/></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FCE8E6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#F4B4AE" stroke-width="2.5"/></pattern></defs><rect width="1280" height="700" fill="#FFFFFF"/><text x="24" y="40" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One copy of the weights, two readers</text>
+<text x="24" y="66" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Qwen3.6-27B, 4-bit. The ANE used to need its own baked-in copy; now the GPU hands it one layer&#x27;s weights at a time, decoded to fp16, through shared IOSurfaces.</text>
+<text x="24" y="118" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">before</text>
+<text x="24" y="136" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">two copies</text>
+<rect x="110.0" y="92" width="247.7" height="56" rx="4" fill="#F1F3F4" stroke="#BDC1C6" stroke-width="1.3"/>
+<text x="233.8" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">macOS + apps</text>
+<text x="233.8" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">12–16 GB</text>
+<rect x="360.7" y="92" width="267.4" height="56" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.3"/>
+<text x="494.4" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">GPU weights</text>
+<text x="494.4" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">15.1 GB</text>
+<rect x="631.1" y="92" width="265.6" height="56" rx="4" fill="#F3E8FD" stroke="#8430CE" stroke-width="1.3"/>
+<text x="763.9" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">ANE weights</text>
+<text x="763.9" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">~15 GB (est.)</text>
+<rect x="899.7" y="92" width="211.9" height="56" rx="4" fill="#FEF7E0" stroke="#E37400" stroke-width="1.3"/>
+<text x="1005.6" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">arena</text>
+<text x="1005.6" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">12 GiB</text>
+<rect x="1114.5" y="92" width="32.8" height="56" rx="4" fill="#F1F3F4" stroke="#80868B" stroke-width="1.3"/>
+<rect x="1150.4" y="92" width="102.6" height="56" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.3" stroke-dasharray="4 3"/>
+<text x="1201.7" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">free</text>
+<text x="1201.7" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">~6 GB</text>
+<text x="1130.946875" y="125" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="700" xml:space="preserve">ws</text>
+<text x="24" y="192" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">now</text>
+<text x="24" y="210" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">one copy</text>
+<rect x="110.0" y="166" width="247.7" height="56" rx="4" fill="#F1F3F4" stroke="#BDC1C6" stroke-width="1.3"/>
+<text x="233.8" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">macOS + apps</text>
+<text x="233.8" y="210.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">12–16 GB</text>
+<rect x="360.7" y="166" width="267.4" height="56" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.3"/>
+<text x="494.4" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">weights</text>
+<text x="494.4" y="210.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">15.1 GB</text>
+<rect x="631.1" y="166" width="68.6" height="56" rx="4" fill="#F1F3F4" stroke="#80868B" stroke-width="1.3"/>
+<rect x="702.7" y="166" width="211.9" height="56" rx="4" fill="#FEF7E0" stroke="#E37400" stroke-width="1.3"/>
+<text x="808.6" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">arena</text>
+<text x="808.6" y="210.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">12 GiB</text>
+<rect x="917.6" y="166" width="335.4" height="56" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.3" stroke-dasharray="4 3"/>
+<text x="1085.3" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">free</text>
+<text x="1085.3" y="210.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">~19 GB</text>
+<text x="665.384375" y="199" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#5F6368" text-anchor="middle" font-weight="700" xml:space="preserve">ws</text>
+<text x="1256" y="244" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="end" font-weight="400" xml:space="preserve">ws = workspace + step tables; now it holds the two weight-surface sets (~0.9 GB each)</text>
+<text x="24" y="288" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One prefill layer, one chunk: who reads what</text>
+<rect x="24" y="308" width="150" height="74" rx="8" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.4"/>
+<text x="99.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">weights</text>
+<text x="99.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">layer i, 4-bit</text>
+<text x="99.0" y="370" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">the GPU&#x27;s copy</text>
+<line x1="177" y1="345" x2="202" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="205" y="308" width="150" height="74" rx="8" fill="#F4F8FE" stroke="#1A73E8" stroke-width="1.4"/>
+<text x="280.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">GPU</text>
+<text x="280.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">dequant_q4</text>
+<text x="280.0" y="370" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">~0.8 GB fp16 written</text>
+<line x1="358" y1="345" x2="383" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="386" y="308" width="150" height="74" rx="8" fill="#F1F3F4" stroke="#80868B" stroke-width="1.4"/>
+<text x="461.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">weight surfaces</text>
+<text x="461.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">set k, fp16</text>
+<text x="461.0" y="370" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">IOSurface, ~0.9 GB</text>
+<line x1="539" y1="345" x2="564" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="567" y="308" width="150" height="74" rx="8" fill="#FAF4FE" stroke="#8430CE" stroke-width="1.4"/>
+<text x="642.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">ANE</text>
+<text x="642.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">dense(i)</text>
+<text x="642.0" y="370" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">weights are inputs</text>
+<line x1="720" y1="345" x2="745" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="748" y="308" width="150" height="74" rx="8" fill="#F1F3F4" stroke="#80868B" stroke-width="1.4"/>
+<text x="823.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">IOSurface</text>
+<text x="823.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">q / k / v out</text>
+<text x="823.0" y="370" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">no copy</text>
+<line x1="901" y1="345" x2="926" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="929" y="308" width="150" height="74" rx="8" fill="#F4F8FE" stroke="#1A73E8" stroke-width="1.4"/>
+<text x="1004.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">GPU</text>
+<text x="1004.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">attn(i)</text>
+<line x1="1082" y1="345" x2="1107" y2="345" stroke="#5F6368" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="1110" y="308" width="150" height="74" rx="8" fill="#FEF7E0" stroke="#E37400" stroke-width="1.4"/>
+<text x="1185.0" y="332" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">arena units</text>
+<text x="1185.0" y="352" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">K/V, state</text>
+<rect x="24" y="410" width="1232" height="74" rx="8" fill="#FAFAFA" stroke="#DADCE0" stroke-width="1"/>
+<text x="40" y="436" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">× 2 sets: two chunks in flight</text>
+<text x="40" y="458" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">The ANE runs chunk k&#x27;s dense(i) from set k while the GPU fills set k+1 and runs the other chunk&#x27;s attention.</text>
+<text x="40" y="476" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Each set is rewritten only after the ANE call that read it has returned: the same &quot;don&#x27;t overwrite what someone is reading&quot; rule as the arena.</text>
+<text x="24" y="516" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">27B, measured (mllm bench, M4 Pro)</text>
+<text x="24" y="544" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="700" xml:space="preserve"></text>
+<text x="470" y="544" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="700" xml:space="preserve">GPU prefill</text>
+<text x="700" y="544" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="700" xml:space="preserve">ANE, one copy</text>
+<text x="930" y="544" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="700" xml:space="preserve"></text>
+<line x1="24" y1="552" x2="1256" y2="552" stroke="#DADCE0" stroke-width="1"/>
+<text x="24" y="570" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">prompt of 4,096 tokens</text>
+<text x="470" y="570" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">131 tok/s</text>
+<text x="700" y="570" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">191 tok/s</text>
+<text x="930" y="570" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">chunks overlap: ANE dense, GPU attn</text>
+<line x1="24" y1="578" x2="1256" y2="578" stroke="#DADCE0" stroke-width="1"/>
+<text x="24" y="596" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">decode while a 2,048-token prefill runs</text>
+<text x="470" y="596" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">3.3 tok/s</text>
+<text x="700" y="596" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">12.1 tok/s</text>
+<text x="930" y="596" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">decode alone: 15.0–15.3</text>
+<line x1="24" y1="604" x2="1256" y2="604" stroke="#DADCE0" stroke-width="1"/>
+<text x="24" y="622" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">peak memory</text>
+<text x="470" y="622" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="400" xml:space="preserve">16.7 GB</text>
+<text x="700" y="622" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">19.8 GB</text>
+<text x="930" y="622" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">a second baked copy would add ~15 GB</text></svg>

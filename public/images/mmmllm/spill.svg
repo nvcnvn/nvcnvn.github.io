@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F6368"/></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FCE8E6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#F4B4AE" stroke-width="2.5"/></pattern></defs><rect width="1280" height="720" fill="#FFFFFF"/><text x="24" y="40" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">Spill to disk: one more place a cache-only block can go</text>
+<text x="24" y="66" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Designed (docs/memory-design.md, &quot;SSD tier&quot;), not built yet. Dashed = the new paths.</text>
+<rect x="40" y="210" width="190" height="64" rx="8" fill="#FFFFFF" stroke="#BDC1C6" stroke-width="1.8" stroke-dasharray="4 3"/>
+<text x="135.0" y="249" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">free</text>
+<rect x="330" y="210" width="190" height="64" rx="8" fill="#E8EAED" stroke="#3C4043" stroke-width="1.8"/>
+<text x="425.0" y="249" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<rect x="640" y="210" width="190" height="64" rx="8" fill="#FEEFC3" stroke="#E37400" stroke-width="1.8"/>
+<text x="735.0" y="249" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">cache-only</text>
+<rect x="960" y="210" width="190" height="64" rx="8" fill="url(#hatch)" stroke="#D93025" stroke-width="1.8"/>
+<text x="1055.0" y="249" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">pending</text>
+<path d="M 230 232 L 326 232" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="278" y="222" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">alloc()</text>
+<path d="M 520 232 L 636 232" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="578" y="184" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">release()</text>
+<text x="578" y="200" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">the cache holds it</text>
+<path d="M 636 256 L 524 256" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="578" y="302" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">ref()</text>
+<text x="578" y="318" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">cache hit</text>
+<path d="M 830 242 L 956 242" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="893" y="184" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">cache_release()</text>
+<text x="893" y="200" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">evict</text>
+<path d="M 425.0 274 C 425.0 360, 1055.0 360, 1055.0 278" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1000" y="350" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">release()</text>
+<text x="1000" y="366" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">nobody else holds it</text>
+<path d="M 1055.0 210 C 1055.0 110, 135.0 110, 135.0 206" fill="none" stroke="#5F6368" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="640" y="106" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">retire(signaled)</text>
+<text x="640" y="122" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">the GPU is past the step</text>
+<rect x="560" y="470" width="520" height="92" rx="10" fill="#F8F9FA" stroke="#5F6368" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="580" y="500" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">SSD: one file per cache node</text>
+<text x="580" y="522" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">its pages + one state snapshot, the spill unit (pages without</text>
+<text x="580" y="540" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">the snapshot below them are useless to a hybrid model)</text>
+<path d="M 700 278 L 700 466" fill="none" stroke="#5F6368" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="716" y="404" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">spill</text>
+<text x="716" y="420" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">pwrite straight from the</text>
+<text x="716" y="436" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">arena buffer, then evict</text>
+<path d="M 560 516 C 420 516, 425.0 470, 425.0 278" fill="none" stroke="#5F6368" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<text x="300" y="510" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#202124" text-anchor="end" font-weight="700" xml:space="preserve">load</text>
+<text x="300" y="526" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">admit, alloc, hold a ref,</text>
+<text x="300" y="542" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">pread straight into units</text>
+<text x="24" y="604" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">One file</text>
+<rect x="24" y="618" width="246" height="40" rx="4" fill="#FFFFFF" stroke="#5F6368" stroke-width="1"/>
+<text x="147.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">header</text>
+<rect x="274" y="618" width="106" height="40" rx="4" fill="#FEEFC3" stroke="#5F6368" stroke-width="1"/>
+<text x="327.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">page 0</text>
+<rect x="384" y="618" width="106" height="40" rx="4" fill="#FEEFC3" stroke="#5F6368" stroke-width="1"/>
+<text x="437.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">page 1</text>
+<rect x="494" y="618" width="56" height="40" rx="4" fill="#FFFFFF" stroke="#5F6368" stroke-width="1"/>
+<text x="522.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">…</text>
+<rect x="554" y="618" width="296" height="40" rx="4" fill="#FEEFC3" stroke="#5F6368" stroke-width="1"/>
+<text x="702.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">snapshot: 74 units</text>
+<rect x="854" y="618" width="116" height="40" rx="4" fill="#FFFFFF" stroke="#5F6368" stroke-width="1"/>
+<text x="912.0" y="643" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">checksum</text>
+<text x="24" y="682" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">header: format, model and weights hash, tokens per page, unit bytes, state units, prefill path (GPU or ANE: different K/V), parent hash, the node&#x27;s token ids</text>
+<text x="24" y="700" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Pages sit at 2 MiB multiples, 4 KiB-aligned, so F_NOCACHE direct I/O needs no staging copy. No fsync: a bad checksum is just a miss.</text></svg>

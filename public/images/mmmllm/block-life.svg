@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 600" width="1280" height="600"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F6368"/></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FCE8E6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#F4B4AE" stroke-width="2.5"/></pattern></defs><rect width="1280" height="600" fill="#FFFFFF"/><text x="24" y="40" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">The life of one block: unit 10</text>
+<text x="24" y="66" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">The frames of one request (A) arriving and leaving, seen from a single unit. Same replay of Arena and Engine as the frames.</text>
+<text x="138" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">free bit</text>
+<text x="138" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">req_refs</text>
+<text x="138" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">cache_refs</text>
+<text x="138" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="end" font-weight="400" xml:space="preserve">pending</text>
+<text x="138" y="168" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#202124" text-anchor="end" font-weight="700" xml:space="preserve">unit 10</text>
+<text x="138" y="262" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#1A73E8" text-anchor="end" font-weight="700" xml:space="preserve">GPU</text>
+<text x="138" y="278" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#9AA0A6" text-anchor="end" font-weight="400" xml:space="preserve">touches it</text>
+<text x="211.44444444444446" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<text x="211.44444444444446" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">before A</text>
+<rect x="158.0" y="132" width="106.9" height="72" rx="6" fill="#FFFFFF" stroke="#BDC1C6" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="211.44444444444446" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="700" xml:space="preserve">free</text>
+<text x="211.44444444444446" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">—</text>
+<rect x="158.0" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="211.44444444444446" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="158.0" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="211.44444444444446" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="158.0" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="211.44444444444446" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="158.0" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="211.44444444444446" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="334.33333333333337" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<text x="334.33333333333337" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A admitted</text>
+<rect x="280.9" y="132" width="106.9" height="72" rx="6" fill="#FFFFFF" stroke="#BDC1C6" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="334.33333333333337" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="700" xml:space="preserve">free</text>
+<text x="334.33333333333337" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">—</text>
+<rect x="280.9" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="334.33333333333337" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="280.9" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="334.33333333333337" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="280.9" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="334.33333333333337" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="280.9" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="334.33333333333337" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="457.22222222222223" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">2a</text>
+<text x="457.22222222222223" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A&#x27;s prefill</text>
+<rect x="403.8" y="132" width="106.9" height="72" rx="6" fill="#E8EAED" stroke="#3C4043" stroke-width="1.6"/>
+<text x="457.22222222222223" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A</text>
+<text x="457.22222222222223" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="457.22222222222223" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3C4043" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<rect x="405.8" y="244" width="102.9" height="18" rx="3" fill="#D2E3FC" stroke="none" stroke-width="1"/>
+<text x="457.22222222222223" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1A73E8" text-anchor="middle" font-weight="700" xml:space="preserve">prefill writes</text>
+<rect x="403.8" y="312" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="457.22222222222223" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">0</text>
+<rect x="403.8" y="342" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="457.22222222222223" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">1</text>
+<rect x="403.8" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="457.22222222222223" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="403.8" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="457.22222222222223" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="457.22222222222223" y="452" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">alloc → 10</text>
+<text x="580.1111111111111" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">2b</text>
+<text x="580.1111111111111" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">snapshot @96</text>
+<rect x="526.7" y="132" width="106.9" height="72" rx="6" fill="#E8EAED" stroke="#3C4043" stroke-width="1.6"/>
+<text x="580.1111111111111" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A+cache</text>
+<text x="580.1111111111111" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="580.1111111111111" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3C4043" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<text x="580.1111111111111" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">—</text>
+<rect x="526.7" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="580.1111111111111" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="526.7" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="580.1111111111111" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="526.7" y="372" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="580.1111111111111" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">1</text>
+<rect x="526.7" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="580.1111111111111" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="580.1111111111111" y="452" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">insert: cache_ref</text>
+<text x="703.0" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">3</text>
+<text x="703.0" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">decode</text>
+<rect x="649.6" y="132" width="106.9" height="72" rx="6" fill="#E8EAED" stroke="#3C4043" stroke-width="1.6"/>
+<text x="703.0" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A+cache</text>
+<text x="703.0" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="703.0" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3C4043" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<rect x="651.6" y="244" width="102.9" height="18" rx="3" fill="#D2E3FC" stroke="none" stroke-width="1"/>
+<text x="703.0" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1A73E8" text-anchor="middle" font-weight="700" xml:space="preserve">step 41 reads</text>
+<rect x="649.6" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="703.0" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="649.6" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="703.0" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="649.6" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="703.0" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="649.6" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="703.0" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="825.8888888888889" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">4</text>
+<text x="825.8888888888889" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">decode</text>
+<rect x="772.4" y="132" width="106.9" height="72" rx="6" fill="#E8EAED" stroke="#3C4043" stroke-width="1.6"/>
+<text x="825.8888888888889" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A+cache</text>
+<text x="825.8888888888889" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="825.8888888888889" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3C4043" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<rect x="774.4" y="244" width="102.9" height="18" rx="3" fill="#D2E3FC" stroke="none" stroke-width="1"/>
+<text x="825.8888888888889" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1A73E8" text-anchor="middle" font-weight="700" xml:space="preserve">step 42 reads</text>
+<rect x="774.4" y="266" width="102.9" height="18" rx="3" fill="#D2E3FC" stroke="none" stroke-width="1"/>
+<text x="825.8888888888889" y="279" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1A73E8" text-anchor="middle" font-weight="700" xml:space="preserve">step 41 reads</text>
+<rect x="772.4" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="825.8888888888889" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="772.4" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="825.8888888888889" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="772.4" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="825.8888888888889" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="772.4" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="825.8888888888889" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="948.7777777777777" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">5</text>
+<text x="948.7777777777777" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">A finishes</text>
+<rect x="895.3" y="132" width="106.9" height="72" rx="6" fill="#FEEFC3" stroke="#E37400" stroke-width="1.6"/>
+<text x="948.7777777777777" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">cache</text>
+<text x="948.7777777777777" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="948.7777777777777" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#E37400" text-anchor="middle" font-weight="700" xml:space="preserve">cache-only</text>
+<text x="948.7777777777777" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">—</text>
+<rect x="895.3" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="948.7777777777777" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="895.3" y="342" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="948.7777777777777" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve"></text>
+<rect x="895.3" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="948.7777777777777" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="895.3" y="402" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="948.7777777777777" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<text x="948.7777777777777" y="452" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">release</text>
+<text x="1071.6666666666665" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">6</text>
+<text x="1071.6666666666665" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">C: evict</text>
+<rect x="1018.2" y="132" width="106.9" height="72" rx="6" fill="url(#hatch)" stroke="#D93025" stroke-width="1.6"/>
+<text x="1071.6666666666665" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="700" xml:space="preserve">was A</text>
+<text x="1071.6666666666665" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#5F6368" text-anchor="middle" font-weight="400" xml:space="preserve">p2</text>
+<text x="1071.6666666666665" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#D93025" text-anchor="middle" font-weight="700" xml:space="preserve">pending</text>
+<text x="1071.6666666666665" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">—</text>
+<rect x="1018.2" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="1071.6666666666665" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="1018.2" y="342" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="1071.6666666666665" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="1018.2" y="372" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="1071.6666666666665" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve"></text>
+<rect x="1018.2" y="402" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="1071.6666666666665" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">43</text>
+<text x="1071.6666666666665" y="452" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">cache_release</text>
+<text x="1194.5555555555554" y="96" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#9AA0A6" text-anchor="middle" font-weight="400" xml:space="preserve">7</text>
+<text x="1194.5555555555554" y="114" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">C: reuse</text>
+<rect x="1141.1" y="132" width="106.9" height="72" rx="6" fill="#E8EAED" stroke="#3C4043" stroke-width="1.6"/>
+<text x="1194.5555555555554" y="162" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">C</text>
+<text x="1194.5555555555554" y="182" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">p0</text>
+<text x="1194.5555555555554" y="224" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3C4043" text-anchor="middle" font-weight="700" xml:space="preserve">live</text>
+<rect x="1143.1" y="244" width="102.9" height="18" rx="3" fill="#D2E3FC" stroke="none" stroke-width="1"/>
+<text x="1194.5555555555554" y="257" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#1A73E8" text-anchor="middle" font-weight="700" xml:space="preserve">prefill writes</text>
+<rect x="1141.1" y="312" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="1194.5555555555554" y="330" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="1141.1" y="342" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="1194.5555555555554" y="360" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve">1</text>
+<rect x="1141.1" y="372" width="106.9" height="26" rx="0" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+<text x="1194.5555555555554" y="390" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve"></text>
+<rect x="1141.1" y="402" width="106.9" height="26" rx="0" fill="#FFF0A8" stroke="#E3B500" stroke-width="1"/>
+<text x="1194.5555555555554" y="420" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="middle" font-weight="700" xml:space="preserve"></text>
+<text x="1194.5555555555554" y="452" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#202124" text-anchor="middle" font-weight="400" xml:space="preserve">retire(43), alloc</text>
+<text x="138" y="452" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="end" font-weight="700" xml:space="preserve">call</text>
+<text x="24" y="488" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">2a → 2b</text>
+<text x="110" y="488" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">The same unit becomes the cache&#x27;s while A still holds it: two refcounts, no copy. A never writes it again: the page is full.</text>
+<text x="24" y="510" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">5</text>
+<text x="110" y="510" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">A is gone, the cache keeps it: cache-only, valid K/V, and the next request with this prompt can ref it.</text>
+<text x="24" y="532" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">6</text>
+<text x="110" y="532" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Evicted while step 43 is in flight: pending records the last committed step, not the last reader.</text>
+<text x="24" y="554" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#202124" text-anchor="start" font-weight="700" xml:space="preserve">7</text>
+<text x="110" y="554" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5F6368" text-anchor="start" font-weight="400" xml:space="preserve">Back to free only when the event passes 43. alloc takes the lowest free bit, so it is reused at once.</text></svg>

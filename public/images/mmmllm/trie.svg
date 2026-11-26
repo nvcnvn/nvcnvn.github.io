@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 330 420" width="330" height="420" font-family="Inter, sans-serif">
+<g data-node="p0">
+<rect x="10" y="90" width="210" height="60" fill="#FFFFFF" stroke="#3C4043" stroke-width="1"/>
+<text x="115" y="115" text-anchor="middle" fill="#202124" font-size="14">page 0</text>
+<text x="115" y="135" text-anchor="middle" fill="#202124" font-size="14">h0 = hash(root, tokens 0–31)</text>
+</g>
+<g data-node="p1">
+<rect x="10" y="210" width="210" height="60" fill="#FFFFFF" stroke="#3C4043" stroke-width="1"/>
+<text x="115" y="235" text-anchor="middle" fill="#202124" font-size="14">page 1</text>
+<text x="115" y="255" text-anchor="middle" fill="#202124" font-size="14">h1 = hash(h0, tokens 32–63)</text>
+</g>
+<g data-node="p2">
+<rect x="20" y="330" width="120" height="60" fill="#FFFFFF" stroke="#3C4043" stroke-width="1"/>
+<text x="80" y="355" text-anchor="middle" fill="#202124" font-size="14">page 2 ★</text>
+<text x="80" y="375" text-anchor="middle" fill="#202124" font-size="14">conversation A</text>
+</g>
+<g data-node="p2b">
+<rect x="180" y="330" width="120" height="60" fill="#FFFFFF" stroke="#3C4043" stroke-width="1"/>
+<text x="240" y="355" text-anchor="middle" fill="#202124" font-size="14">page 2' ★</text>
+<text x="240" y="375" text-anchor="middle" fill="#202124" font-size="14">conversation B</text>
+</g>
+<g data-node="root">
+<circle cx="120" cy="20" r="10" fill="#202124" stroke="#3C4043" stroke-width="1"/>
+</g>
+<g data-edge="p0-p1">
+<path d="M115 150 L115 210" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+<path d="M110 200 L115 210 L120 200" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+</g>
+<g data-edge="p1-p2">
+<path d="M115 270 L115 318 L80 318 L80 330" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+<path d="M75 320 L80 330 L85 320" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+</g>
+<g data-edge="p1-p2b">
+<path d="M220 240 L240 240 L240 330" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+<path d="M235 320 L240 330 L245 320" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+</g>
+<g data-edge="r-p0">
+<path d="M118 30 L118 90" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+<path d="M113 80 L118 90 L123 80" fill="none" stroke="#3C4043" stroke-width="1.5"/>
+</g>
+</svg>
