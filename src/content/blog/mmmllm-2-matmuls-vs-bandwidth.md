@@ -130,11 +130,14 @@ is part 3's main trick.
 
 ### Zoom 4: the state is one span over 74 units
 
-[![74 units in step-table order, with the 48 linear layers' state laid end to end across them](/images/mmmllm/zoom-state.svg)](/images/mmmllm/zoom-state.svg)
+[![Two rows on one byte axis: the units s0, s1, s2 … s73 the state is stored in, and the layers 0, 1, 2 … 62 that the bytes belong to; layer 0 runs from s0 into s1](/images/mmmllm/zoom-state.svg)](/images/mmmllm/zoom-state.svg)
 
 The same kind of units hold the other kind of memory. A request's state for the 48 linear layers is one 146.8 MiB
-byte span, laid over its 74 units in step-table order. A layer's state (3.06 MiB) doesn't line up with unit
-boundaries, and it doesn't need to: byte *x* of the span is in unit number `state[x / 2 MiB]`.
+array, stored in its 74 units in step-table order. The picture puts the two views on one byte axis: the top row is
+where the bytes are (2 MiB units), the bottom row is what they are (one 3.06 MiB state per layer). The borders don't
+line up, and they don't need to: byte *x* of the array is in unit `state[x / 2 MiB]`, at offset `x % 2 MiB`. Layer 0
+simply runs from the first unit into the second. And 74 units hold 148 MiB, so the last 1.2 MiB stays unused: the
+price of one unit size for everything.
 
 ### Zoom 5: a linear layer's state is rewritten whole
 
