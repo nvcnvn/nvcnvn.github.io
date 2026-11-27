@@ -9,6 +9,8 @@ These days I work on AI inference, running engines like SGLang in production. Th
 
 Currently writing: [mmmllm](/blog/mmmllm-1-dram-slab/), a series about building an LLM server around the unified memory of a Mac mini.
 
+Currently building: a stack for running AI, from agent harness and sandbox to router, engine and storage. See [Projects](/projects/).
+
 - Email: [nguyen@devguards.com](mailto:nguyen@devguards.com)
 - GitHub: [@nvcnvn](https://github.com/nvcnvn)
 - LinkedIn: [@nvcnvn](https://www.linkedin.com/in/nvcnvn/)

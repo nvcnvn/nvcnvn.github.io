@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Project {
+  layer: string;
+  name: string;
+  repo: string;
+  status: string;
+  summary: string;
+  links?: { label: string; href: string }[];
+}
+
+// top of the stack first: agents run in the harness (and are developed in the sandbox), call the router,
+// the router picks an engine, and the engine caches on storage
+const projects: Project[] = [
+  {
+    layer: 'Harness',
+    name: 'agent-loop',
+    repo: 'https://github.com/nvcnvn/agent-loop',
+    status: 'Working, not in use yet',
+    summary:
+      'A Go runtime for long-running, tool-using, multi-agent workflows. Event-sourced: every chat turn, tool call and result is an append-only event in Postgres. A chat is turn-based, which makes it a good old event log.',
+    links: [{ label: 'Design docs', href: 'https://github.com/nvcnvn/agent-loop/tree/main/docs' }],
+  },
+  {
+    layer: 'Sandbox',
+    name: 'cloudbox',
+    repo: 'https://github.com/nvcnvn/cloudbox',
+    status: 'Working, local only',
+    summary:
+      'Sealed, production-shaped Kubernetes sandboxes for developers and AI coding agents. An agent applies your existing manifests to a sandbox with egress denied by default, learns what its code tried to reach, amends a declared allowlist, and ends with a signed record of the run that claims no more than was observed.',
+    links: [{ label: 'Quickstart', href: 'https://github.com/nvcnvn/cloudbox/blob/main/docs/quickstart.md' }],
+  },
+  {
+    layer: 'Routing',
+    name: 'pharos',
+    repo: 'https://github.com/nvcnvn/pharos',
+    status: 'Early, no releases',
+    summary:
+      'A single-binary LLM router for small teams running a mix of engines (Ollama, llama.cpp, vLLM, SGLang, …) on a handful of machines. It routes each request by the live state of every engine: which models are loaded, how many requests are waiting, and who holds the prompt prefix in cache.',
+    links: [{ label: 'Architecture', href: 'https://github.com/nvcnvn/pharos/blob/main/docs/ARCHITECTURE.md' }],
+  },
+  {
+    layer: 'Engine',
+    name: 'mmmllm',
+    repo: 'https://github.com/nvcnvn/mmmllm',
+    status: 'Toy project, runs',
+    summary:
+      'An LLM serving engine in C++/Metal, built around the unified memory of an Apple M4 Mac mini, where the CPU, GPU and Neural Engine share one slab of DRAM. Bit-exact with mlx-lm, with an OpenAI-compatible API.',
+    links: [{ label: 'Blog series', href: '/blog/mmmllm-1-dram-slab/' }],
+  },
+  {
+    layer: 'Storage & cache',
+    name: 'rock-solid',
+    repo: 'https://github.com/nvcnvn/rock-solid',
+    status: 'Design stage',
+    summary:
+      'Distributed storage for homelab Kubernetes, ReadWriteMany (RWX) first: a FUSE client on every node mounts one shared filesystem, with no NFS server pod in front of each volume the way Longhorn RWX does it. Block volumes and S3 build on the same Raft-replicated core, whose sans-IO design lets RDMA, DPDK or SPDK plug in as the transport later. The plan is to use it as the cache layer for mmmllm.',
+    links: [
+      { label: 'Design', href: 'https://github.com/nvcnvn/rock-solid/blob/main/docs/design.md' },
+      { label: 'Deep-dive posts', href: 'https://github.com/nvcnvn/rock-solid/tree/main/blogs' },
+    ],
+  },
+];
+---
+
+<Base title="Projects" description="What I'm building: a stack for running AI, from the agent harness down to storage and cache.">
+  <header class="post-header">
+    <h1>Projects</h1>
+    <p class="lede">
+      Piece by piece, I'm building a full stack for running AI: a harness for agents and a sandbox to develop
+      them in, a router in front of the engines, an engine, and the storage and cache underneath. All of it is early, and most of it is for learning.
+    </p>
+  </header>
+
+  <ol class="stack">
+    {
+      projects.map((p) => (
+        <li class="project">
+          <div class="project-head">
+            <span class="layer">{p.layer}</span>
+            <span class="status">{p.status}</span>
+          </div>
+          <h2>
+            <a href={p.repo}>{p.name}</a>
+          </h2>
+          <p>{p.summary}</p>
+          {p.links && (
+            <ul class="project-links">
+              {p.links.map((l) => (
+                <li>
+                  <a href={l.href}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</Base>
