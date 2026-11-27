@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { getPosts, formatDate, readingTime, slugifyTag } from '../../utils';
+import { REPO } from '../../consts';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -26,10 +27,15 @@ export async function getStaticPaths() {
 
 const { post, newer, older, series } = Astro.props;
 const { Content } = await render(post);
-const { title, description, date, updated, tags } = post.data;
+const { title, description, date, updated, tags, original, canonical } = post.data;
+const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href;
+const feedbackUrl = `${REPO}/issues/new?${new URLSearchParams({
+  title: `Feedback: ${title}`,
+  body: `Post: ${postUrl}\n\n`,
+})}`;
 ---
 
-<Base title={title} description={description} type="article">
+<Base title={title} description={description} type="article" canonical={canonical}>
   <article>
     <header class="post-header">
       <h1>{title}</h1>
@@ -38,6 +44,13 @@ const { title, description, date, updated, tags } = post.data;
         {updated && <span>Updated {formatDate(updated)}</span>}
         <span>{readingTime(post.body)}</span>
       </div>
+      {
+        original && (
+          <p class="post-original">
+            Originally published on <a href={original.url}>{original.site}</a>.
+          </p>
+        )
+      }
       {
         tags.length > 0 && (
           <ul class="tags" aria-label="Tags">
@@ -54,6 +67,10 @@ const { title, description, date, updated, tags } = post.data;
     <div class="prose">
       <Content />
     </div>
+
+    <p class="post-feedback">
+      Spotted a mistake or have a thought? <a href={feedbackUrl}>Open an issue on GitHub</a>.
+    </p>
   </article>
 
   <nav class="post-nav" aria-label="More posts">

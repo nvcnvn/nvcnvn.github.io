@@ -435,6 +435,19 @@ hr {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
+.post-original {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+}
+.post-feedback {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+  color: var(--fg-muted);
+}
+
 .post-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;

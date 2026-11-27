@@ -13,6 +13,9 @@ const blog = defineCollection({
     draft: z.boolean().default(false),
     series: z.string().optional(), // posts sharing a series get Part n ← → navigation instead of Older / Newer
     part: z.number().int().positive().optional(),
+    // reposts: where the post first appeared; shown as an "Originally published on …" note
+    original: z.object({ url: z.string().url(), site: z.string() }).optional(),
+    canonical: z.string().url().optional(), // override <link rel="canonical"> (defaults to this site)
   }),
 });
 

@@ -4,3 +4,4 @@ export const AUTHOR = 'Nguyễn Văn Cao Nguyên';
 export const SOCIAL = {
   github: 'https://github.com/nvcnvn',
 };
+export const REPO = 'https://github.com/nvcnvn/nvcnvn.github.io';

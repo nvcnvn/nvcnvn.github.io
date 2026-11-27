@@ -8,11 +8,12 @@ interface Props {
   title?: string;
   description?: string;
   type?: 'website' | 'article';
+  canonical?: string;
 }
 
 const { title, description = SITE_DESCRIPTION, type = 'website' } = Astro.props;
 const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = Astro.props.canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
