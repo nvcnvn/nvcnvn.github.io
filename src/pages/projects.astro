@@ -62,6 +62,38 @@ const projects: Project[] = [
     ],
   },
 ];
+
+// smaller side projects, newest first
+const others: Project[] = [
+  {
+    layer: '2026',
+    name: 'dg',
+    repo: 'https://github.com/nvcnvn/dg',
+    status: 'Working',
+    summary:
+      'Draws diagrams from text: you write what exists as an HCL model, arrange it by dragging in a panel beside your editor in VS Code, and dg routes the arrows around the boxes every time it draws.',
+    links: [
+      { label: 'Playground', href: 'https://nvcnvn.github.io/dg/playground/' },
+      { label: 'Docs', href: 'https://nvcnvn.github.io/dg/' },
+    ],
+  },
+  {
+    layer: '2025',
+    name: 'flows',
+    repo: 'https://github.com/nvcnvn/flows',
+    status: 'Working',
+    summary:
+      'A minimal durable workflow runner in Go, Temporal and Cadence style but far simpler: Postgres is the only dependency, completed steps are memoized there and replayed on resume, and steps run inside a pgx transaction so their outputs and your business writes commit together.',
+  },
+  {
+    layer: '2025',
+    name: 'adk-golang',
+    repo: 'https://github.com/agent-protocol/adk-golang',
+    status: 'Inactive',
+    summary:
+      "A Go implementation of Google's Agent Development Kit, written before an official Go version existed. It speaks the Agent2Agent (A2A) protocol, so its agents can work with ADK agents written in other languages.",
+  },
+];
 ---
 
 <Base title="Projects" description="What I'm building: a stack for running AI, from the agent harness down to storage and cache.">
@@ -98,4 +130,36 @@ const projects: Project[] = [
       ))
     }
   </ol>
+
+  <section class="others" aria-labelledby="others-heading">
+    <h2 id="others-heading">Other things I've built</h2>
+    <ul class="stack">
+      {
+        others.map((p) => (
+          <li class="project project-small">
+            <div class="project-head">
+              <span class="layer">{p.layer}</span>
+              <span class="status">{p.status}</span>
+            </div>
+            <h3>
+              <a href={p.repo}>{p.name}</a>
+            </h3>
+            <p>{p.summary}</p>
+            {p.links && (
+              <ul class="project-links">
+                {p.links.map((l) => (
+                  <li>
+                    <a href={l.href}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="more">
+      Everything else, going back to 2013, is <a href="https://github.com/nvcnvn?tab=repositories">on GitHub</a>.
+    </p>
+  </section>
 </Base>

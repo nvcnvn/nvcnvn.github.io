@@ -371,6 +371,29 @@ hr {
 .project p {
   margin: 0;
 }
+.project h3 {
+  font-size: 1.0625rem;
+  margin: 0.375rem 0 0.5rem;
+}
+.project h3 a {
+  color: inherit;
+}
+.project-small {
+  padding: 1rem 1.25rem;
+  background: none;
+}
+.others {
+  margin-top: 3.5rem;
+}
+.others h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+.others .more {
+  margin: 1.25rem 0 0;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
 .project-links {
   list-style: none;
   padding: 0;
